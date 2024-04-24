@@ -16,6 +16,12 @@ pc.defineParameter(
     longDescription="A shared VLAN name (functions as a private key allowing other experiments to connect to this VLAN). Must be fewer than 32 alphanumeric characters."),
 params = pc.bindParameters()
 
+if params.name.strip() == '':
+    err = portal.ParameterError(
+        "VLAN name not defined",
+        ['name'])
+    pc.reportError(err)
+
 pc.verifyParameters()
 
 # Create a Request object to start building the RSpec.
