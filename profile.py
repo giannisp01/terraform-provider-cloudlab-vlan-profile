@@ -10,7 +10,7 @@ import geni.rspec.emulab as emulab
 # Create a portal object,
 pc = portal.Context()
 
-portal.defineParameter(
+pc.defineParameter(
     "name", "VLAN Name",
     portal.ParameterType.STRING, "",
     longDescription="A shared VLAN name (functions as a private key allowing other experiments to connect to this VLAN). Must be fewer than 32 alphanumeric characters."),
