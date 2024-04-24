@@ -12,7 +12,7 @@ pc = portal.Context()
 
 pc.defineParameter(
     "name", "VLAN Name",
-    portal.ParameterType.STRING, "",
+    portal.ParameterType.STRING,
     longDescription="A shared VLAN name (functions as a private key allowing other experiments to connect to this VLAN). Must be fewer than 32 alphanumeric characters."),
 params = pc.bindParameters()
 
